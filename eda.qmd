@@ -1,0 +1,39 @@
+1. What environmental question are you curious about? State it in one sentence.
+
+I'm interested in looking at areas with different management histories, and how the biodiversity within them varies.
+
+2. Why does this question matter, and to whom? Who would make a different decision depending on the answer?
+
+This question matters because it explains what management strategies increase/decrease biodiversity, which is plumetting at an alarming rate. I'd argue it matters to everyone, as the ecosystem services we recieve are related to the biodiversity of an ecosystem. Particularly it matters to land managers.
+
+Stakeholders might make different decisions if they are trying to extract natural resources.
+
+3. What do you already know about this topic? Name at least one source (e.g., a paper, report, or news article) that gives context for your question.
+
+Land management history and its effects on current biodiversity are things I'm very familiar with, as I're worked on many conservation/restoration efforts on degraded land due to previous land management.
+
+iNat gives lots of context to my question, as it's an easy way to look at biodiversity (in areas where there are many users)
+
+4. What is your response variable? What is the main explanatory variable you think influences it?
+
+Response variable will be some biodiversity index, explanatory variable will be past land uses and land management practices.
+
+2.1 What dataset(s) will you use to answer your question? Provide the source and a link.
+
+iNat
+https://www.inaturalist.org/
+
+
+2.2 Who collected these data, how, and why? How might the way the data were collected affect what you can learn from them?
+
+Data is collected mostly by causal observers that take pictures and upload them to iNat. This has lots of biases, one of which is ease of access (less observations in areas with less trails/public access).
+
+2.3 What does one row in your data represent (e.g., one site, one year, one sample)? How many rows are there?
+
+One row is one observation of one taxa. I haven't sorted the iNat observations I want to use yet, but I'd anticipate hundreds.
+
+2.4 Download the data and read it into R. Include the code for cleaning your data, or joining it if you have multiple sources.
+
+Not yet ready.
+
+3.1
