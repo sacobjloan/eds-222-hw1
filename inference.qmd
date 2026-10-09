@@ -272,7 +272,8 @@ p1000 <- data.frame(p1000)
 p1000 |> 
     ggplot(aes(x = p1000))+
     geom_histogram(binwidth = 0.01)+
-    geom_histogram(data = subset(p1000,p1000 <0.05),fill = "blue", binwidth = 0.01)
+    geom_histogram(data = subset(p1000,p1000 <0.05),fill = "blue", binwidth = 0.01) +
+    geom_vline(xintercept = 0.05, color='green')
 ```
 
 ```{r}

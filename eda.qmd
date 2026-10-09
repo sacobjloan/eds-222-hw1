@@ -1,3 +1,6 @@
+```{r}
+library(tidyverse)
+```
 1. What environmental question are you curious about? State it in one sentence.
 
 I'm interested in looking at areas with different management histories, and how the biodiversity within them varies.
@@ -37,3 +40,35 @@ One row is one observation of one taxa. I haven't sorted the iNat observations I
 Not yet ready.
 
 3.1
+
+```{r}
+inatbulk <- read.csv('data/bulkinat.csv')
+inatinvas <- read.csv('data/invasiveinat.csv')
+```
+
+```{r}
+inatinvas <- inatinvas |> 
+    mutate(invasive = TRUE) |> 
+    select(common_name, invasive) |> 
+    unique()
+
+inat <- left_join(inatbulk,inatinvas,by = 'common_name') |> 
+    d[is.na(d)] <- 0
+inat$invasive[is.na(inat$invasive)] <- FALSE 
+
+inat <- inat |> 
+    mutate(year = str_sub(time_observed_at,1,4))
+```
+
+```{r}
+percinva<- inat |> 
+    summarise(percinva = mean(invasive), .by = year)
+```
+
+```{r}
+percinva |> 
+    ggplot(
+        aes(x = year, y=percinva)
+    )+
+        geom_bar(stat = "identity")
+```
