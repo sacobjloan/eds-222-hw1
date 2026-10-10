@@ -52,8 +52,8 @@ inatinvas <- inatinvas |>
     select(common_name, invasive) |> 
     unique()
 
-inat <- left_join(inatbulk,inatinvas,by = 'common_name') |> 
-    d[is.na(d)] <- 0
+inat <- left_join(inatbulk,inatinvas,by = 'common_name')
+
 inat$invasive[is.na(inat$invasive)] <- FALSE 
 
 inat <- inat |> 

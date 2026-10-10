@@ -62,7 +62,7 @@ oldnewdif <- observedstat[1,2] - observedstat[2,2]
 
 everything |> 
     ggplot(
-        aes(x = meanconc, color = before1970)
+        aes(x = meanconc, fill = before1970)
     )+
         geom_histogram(alpha = 0.1)
 ```
@@ -134,7 +134,7 @@ sampstatfree <- freeway$concbyprox[1] - freeway$concbyprox[2]
 # Visualizing lead concentration in houses by proximity to freeway
 everything |> 
     ggplot(
-        aes(x = meanconc,color = within1kmfree)
+        aes(x = meanconc,fill = within1kmfree)
     )+geom_histogram(alpha = 0.1)
 ```
 
